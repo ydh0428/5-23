@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/flex.css" />
+  </head>
+  <style>
+    .container {
+      display: flex;
+    }
+    .item {
+      width: 100px;
+    }
+    .row {
+      /* justify-content: center; */
+      /* justify-content: space-between; */
+    }
+    .column {
+      /* align-items: center; */
+    }
+    .all {
+      justify-content: center;
+      align-items: center;
+    }
+    .gap {
+      /* gap: 10px; */
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <!-- flex 란? -->
+      <h2>1. flex 란?</h2>
+      <p>flex는 레이아웃 배치를 위한 기능입니다.</p>
+      <xmp class="code">
+        <div class="container">
+          <div class="item">helloflex</div>
+          <div class="item">abc</div>
+          <div class="item">helloflex</div>
+        </div>
+    </xmp>
+      <p>• 부모 요소인 container 👉 Flex Container(플렉스 컨테이너)</p>
+      <p>• 자식 요소인 item 👉 Flex Item(플렉스 아이템)</p>
+      <p style="font-size: 21px; margin: 10px">
+        <strong
+          >"부모 요소에 flex 속성을 적용하면 내부 요소들의 배치를 조작할 수
+          있다!"</strong
+        >
+      </p>
+      <!-- flex에 대한 설명 -->
+      <h2>2. flex 알아보기</h2>
+      <p>
+        • flex 아이템들은 기본적으로 가로 방향으로 배치되고, 자신의 너비만큼의
+        공간을 차지함
+      </p>
+      <p>
+        • 아이템의 높이를 설정하지않으면, 자동으로 컨테이너의 높이만큼 늘어남
+      </p>
+      <div class="container">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+      </div>
+
+      <!-- flex-direction -->
+      <h3>2.1 flex-direction</h3>
+      <p>아이템들이 배치되는 축의 방향을 결정하는 속성</p>
+      <p style="font-size: 25px; margin-top: 20px"><strong>• row</strong></p>
+      <p>아이템이 가로 방향으로 정렬됨, 기본값</p>
+      <xmp class="code">flex-direction: row;</xmp>
+      <div class="container" style="flex-direction: row">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+      </div>
+      <p style="font-size: 25px; margin-top: 20px"><strong>• column</strong></p>
+      <p>아이템이 세로 방향으로 정렬됨</p>
+      <xmp class="code">flex-direction: column;</xmp>
+      <div class="container" style="flex-direction: column">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+      </div>
+
+      <!-- justify-content -->
+      <h3>2.2 justify-content</h3>
+      <p>• 메인축 방향으로 아이템들을 정렬하는 속성</p>
+      <p>• 자주 사용하는 속성: center, space-between</p>
+      <p class="small">
+        &nbsp&nbsp&nbsp&nbsp • <strong>center:</strong> 아이템을 가운데로 정렬
+      </p>
+      <p class="small">
+        &nbsp&nbsp&nbsp&nbsp • <strong>space-between:</strong> 아이템 사이에
+        균일한 간격을 만들어줌
+      </p>
+      <xmp class="code">justify-content: center;</xmp>
+      <xmp class="code">justify-content: space-between;</xmp>
+      <div class="container row">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+      </div>
+
+      <!-- align-items -->
+      <h3>2.3 align-items</h3>
+      <p>• 수직축 방향으로 아이템들을 정렬하는 속성</p>
+      <p>• 자주 사용하는 속성: center</p>
+      <p class="small">
+        &nbsp&nbsp&nbsp&nbsp • <strong>center:</strong> 아이템을 가운데로 정렬
+      </p>
+      <xmp class="code">align-items: center;</xmp>
+      <div class="container column">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+      </div>
+
+      <!-- justify-content & align-items -->
+      <h3>2.4 중앙에 정렬하기</h3>
+      <pre><xmp class="code">justify-content: center;
+align-items: center;</xmp></pre>
+      <p>
+        • justify-content와 align-items의 속성을 모두 center로 주면 아이템을
+        중앙정렬할 수 있음
+      </p>
+      <div class="container all">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+      </div>
+
+      <!-- gap -->
+      <h3>2.5 gap</h3>
+      <p>• 아이템 사이의 공간을 생성함, 부모 요소에 적용</p>
+      <xmp class="code">gap: 10px;</xmp>
+      <div class="container gap">
+        <div class="item">1번</div>
+        <div class="item">2번</div>
+        <div class="item">3번</div>
+      </div>
+    </div>
+  </body>
+</html>

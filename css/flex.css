@@ -1,0 +1,46 @@
+body {
+  width: 55vw;
+  margin: 0 auto;
+}
+.wrap {
+  margin: 50px 30px;
+  font-size: 18px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 50px 0 20px 0;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 50px 0 20px 0;
+}
+p {
+  font-size: 18px;
+  padding: 5px 0;
+}
+strong {
+  font-weight: 700;
+}
+.code {
+  border: 2px solid rgb(96, 96, 96);
+  padding: 10px;
+}
+.small {
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  background-color: #feff86;
+  height: 150px;
+  margin: 10px 0 0 0;
+}
+.item {
+  display: flex;
+  background-color: #b0daff;
+  border: 2px solid #146c94;
+  color: #146c94;
+  align-items: center;
+  justify-content: center;
+}
