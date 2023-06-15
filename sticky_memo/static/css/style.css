@@ -1,84 +1,175 @@
-h1 {
-    color: #f2994a;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.hidden {
-    display: none;
-}
- .logo{
-    width: 270px;
-    height: 270px;
+.change-color {
+   color: red;
+   font-weight: 700;
  }
-
+ 
+ /* flex 수업 */
+ /* 메인 페이지 정렬하기 */
+ .index {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ /* 메모장 페이지 정렬하기 */
+ header {
+   display: flex;
+   /* background-color: pink; */
+   justify-content: space-between;
+   margin: 50px 0;
+ }
+ 
+ /* 모달창 정렬하기 */
+ .modal-wrap {
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.318);
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+ }
+ 
+ .upload-form {
+   top: 168px;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+ 
+ .upload-btn-wrap {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px 20px;
+ }
+ 
+ .input-wrap {
+   display: flex;
+   flex-direction: column;
+   padding: 0 20px;
+ }
+ 
+ .btn-wrap {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+ 
+ /* class */
+ .hidden {
+   display: none;
+ }
+ 
+ /* common */
  .enter-btn,
- .new-btn{
-    color:white;
-    background-color: #f2994a;
-    padding: 20px 80px;
-    border-radius: 10px;
-    font-weight: 700;
+ .new-btn {
+   background-color: #f2994a;
+   color: white;
+   font-size: 16px;
+   font-weight: 700;
+   padding: 20px 80px;
+   border-radius: 10px;
  }
- .exit-btn{
-    color:orange;
-    background-color:white;
-    border: 2px solid orange;
-    padding: 20px 50px;
-    border-radius: 10px;
-    font-weight:700;
+ 
+ /* index.html */
+ h1 {
+   color: #f2994a;
+   font-size: 40px;
+   font-weight: bold;
  }
- .memo{
-    position:relative;
-    background-color: #fff3ca;
-    padding:20px;
-    margin:20px 0;
-    border-radius: 5px;
+ 
+ img {
+   width: 275px;
+   height: 272px;
+   margin: 60px auto;
  }
-
- /* .content {
-    padding: 10px 10px;
- } */
- .title{
-    padding-bottom: 10px;
+ 
+ /* memo.html */
+ .wrap {
+   width: 1190px;
+   margin: 0 auto;
+   padding-top: 40px;
  }
- .more-btn{
-    position: absolute;
-    top:10px;
-    right:10px;
+ 
+ .exit-btn {
+   border: 2px solid #f2994a;
+   color: #f2994a;
+   padding: 20px 50px;
+   border-radius: 10px;
+   font-size: 16px;
+   font-weight: 700;
  }
- .btn-wrap button
-  {
-    background-color:white;
-    padding: 5px 10px;
+ 
+ .memo {
+   position: relative;
+   background-color: #fff3ca;
+   padding: 34px 32px 24px;
+   border-radius: 10px;
+   font-size: 16px;
+   margin-bottom: 20px;
  }
- .delete-btn{
-    color:red;
+ 
+ .memo .title {
+   margin-bottom: 10px;
+   font-weight: 700;
  }
- .btn-wrap{
-    position: absolute;
-    top: 5px;
-    right:5px;
+ 
+ .more-btn {
+   position: absolute;
+   width: 16px;
+   height: 5px;
+   top: 20px;
+   right: 20px;
+   background-color: transparent;
+   background-color: #f2994a;
+   background-image: url(../src/img/more.png);
  }
- .upload-form{
-    background-color: #fff3ca;
-    width: 500px;
-    height:400px;
-    padding: 20px;
-    position:relative;
+ 
+ .btn-wrap button {
+   padding: 5px 20px;
+   background-color: white;
+   border-radius: 5px;
  }
- .upload-btn{
-    background-color: white;
-    padding:10px 20px;
-    border-radius: 3px;
-    color:red;
+ 
+ .delete-btn {
+   color: red;
  }
- .close-btn{
-    position:absolute;
-    top: 5px;
-    right:5px;
+ 
+ /* modal */
+ .upload-form,
+ .edit-form {
+   position: absolute;
+   width: 900px;
+   height: 421px;
+   background-color: #fff3ca;
+   border-radius: 10px;
  }
- .upload-form input,
- .upload-form textarea{
-    background-color: transparent;
+ 
+ .upload-btn {
+   background-color: white;
+   padding: 10px;
+   border-radius: 10px;
+   color: red;
+ }
+ 
+ .input-wrap input {
+   height: 30px;
+ }
+ 
+ .input-wrap textarea {
+   height: 270px;
+ }
+ 
+ .input-wrap input,
+ .input-wrap textarea {
+   border: 1px solid #ccc;
+   background-color: transparent;
+ }
+ 
+ .input-wrap input:focus,
+ .input-wrap textarea:focus {
+   outline: none;
  }

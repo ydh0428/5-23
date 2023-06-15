@@ -21,5 +21,8 @@ from memo import views as memo_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('my-home/', views.my_home),
-    path('memo/', memo_views.get_all_memo)
+    path('memo/', memo_views.get_all_memo, name="memo_list"),
+    path('', views.index, name='main'),
+    path('memo/<int:pk>/', memo_views.get_memo, name='memo_detail'),
+    path('memo/create/', memo_views.create_memo, name="memo_create")
 ]
