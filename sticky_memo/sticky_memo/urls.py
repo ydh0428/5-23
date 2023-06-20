@@ -23,6 +23,8 @@ urlpatterns = [
     path('my-home/', views.my_home),
     path('memo/', memo_views.get_all_memo, name="memo_list"),
     path('', views.index, name='main'),
-    path('memo/<int:pk>/', memo_views.get_memo, name='memo_detail'),
-    path('memo/create/', memo_views.create_memo, name="memo_create")
+    path('memo/<int:id>/', memo_views.get_memo, name='memo_detail'),
+    path('memo/create/', memo_views.create_memo, name="memo_create"),
+    path('memo/update/<int:id>/', memo_views.update_memo, name="memo_update"),
+    path('memo/delete/<int:id>/',memo_views.delete_memo, name="memo_delete")
 ]

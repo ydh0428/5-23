@@ -6,8 +6,8 @@ def get_all_memo(request):
 
     return render(request, "memo_list.html", context)
 
-def get_memo(request, pk):
-    memo = Memo.objects.get(id=pk)
+def get_memo(request, id):
+    memo = Memo.objects.get(id=id)
     context = {"memo": memo}
 
     return render(request, "memo_detail.html", context)
@@ -24,3 +24,20 @@ def create_memo(request):
         if form.is_valid():
             form.save()
             return redirect('memo_list')
+        
+def update_memo(request, id):
+    memo = Memo.objects.get(id=id)
+
+    if request.method == 'POST':
+        form = MemoForm(request.POST, instance=memo)
+        if form.is_valid():
+            form.save()
+            return redirect('memo_list')
+        
+def delete_memo(request, id):
+    memo = Memo.objects.get(id=id)
+
+    if request.method == 'POST':
+        memo.delete()
+        return redirect('memo_list')
+                
